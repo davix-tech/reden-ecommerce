@@ -1,0 +1,241 @@
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  gap: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+.searchForm {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.searchButton {
+  padding: 0.75rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+.link {
+  font-size: 0.95rem;
+  color: #333;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #007bff;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.iconButton:hover {
+  background-color: #f0f0f0;
+}
+
+.cartButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.cartButton:hover {
+  background-color: #f0f0f0;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loginButton {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.loginButton:hover {
+  background-color: #0056b3;
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+}
+
+.mobileMenuButton {
+  display: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mobileMenu {
+  display: none;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e0e0e0;
+  padding: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileLink {
+  padding: 0.75rem 1rem;
+  color: #333;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .navLinks {
+    display: none;
+  }
+
+  .searchForm {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 60px;
+    padding: 0 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .searchForm {
+    max-width: 150px;
+  }
+
+  .searchInput {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .searchButton {
+    padding: 0.5rem 0.75rem;
+  }
+
+  .rightSection {
+    gap: 0.5rem;
+  }
+
+  .iconButton,
+  .cartButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .loginButton,
+  .logoutButton {
+    display: none;
+  }
+
+  .mobileMenuButton {
+    display: block;
+  }
+
+  .navbar.open .mobileMenu {
+    display: flex;
+  }
+
+  .mobileMenu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    z-index: 99;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
